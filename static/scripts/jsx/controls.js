@@ -101,7 +101,7 @@ class CommandLine extends React.Component {
             <td>Command</td>
             <td><input type="text" value={this.props.command} /></td>
             <td rowSpan="2">
-              <form action="/post" method="POST">
+              <form action="/" method="POST">
                 <input type="hidden" name="command" value={this.props.commandRaw} />
                 <input type="submit" value="ENTER" className="enter-button" />
               </form>
