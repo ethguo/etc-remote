@@ -1,0 +1,42 @@
+body {
+  font-size: 100%;
+}
+
+
+#numpad-table {
+  float:left;
+  padding-right: 4em;
+  padding-bottom: 4em;
+}
+
+#command-table {
+  padding-bottom: 4em;
+}
+
+.numpad-button, .command-button {
+  font-size: inherit;
+  padding: 1em;
+}
+
+.numpad-button {
+  width: 4em;
+  height: 4em;
+}
+
+ .command-button {
+   width: 6em;
+   height: 4em;
+ }
+
+input {
+  font-size: 120%;
+  padding: 0.5em;
+}
+
+/*.numpad-button {
+  padding: 1em;
+}*/
+
+.enter-button {
+  height: 100%;
+}

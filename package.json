@@ -1,0 +1,27 @@
+{
+  "name": "etc-remote",
+  "version": "1.0.0",
+  "description": "Web-based remote control for ETC Element lighting board",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethguo/etc-remote.git"
+  },
+  "author": "Ethan Guo <ethguo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ethguo/etc-remote/issues"
+  },
+  "homepage": "https://github.com/ethguo/etc-remote#readme",
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-browser": "^3.0.2",
+    "gulp-size": "^2.1.0",
+    "reactify": "^1.1.1"
+  }
+}

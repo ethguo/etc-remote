@@ -1,0 +1,20 @@
+{
+  "name": "etc-remote",
+  "homepage": "https://github.com/ethguo/etc-remote",
+  "authors": [
+    "Ethan Guo <ethguo@gmail.com>"
+  ],
+  "description": "Web-based remote control for ETC Element lighting board",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.4.0"
+  }
+}
