@@ -83,7 +83,7 @@ class CommandPalette extends React.Component {
             this.renderButton("Full", 9)
           ), 
           React.createElement("tr", null, 
-            React.createElement("td", null), 
+            this.renderButton("Clear", "*"), 
             this.renderButton("Chan Check", 0), 
             this.renderButton("Sneak", "#")
           )
@@ -100,17 +100,17 @@ class CommandLine extends React.Component {
         React.createElement("tbody", null, 
           React.createElement("tr", null, 
             React.createElement("td", null, "Command"), 
-            React.createElement("td", null, React.createElement("input", {type: "text", value: this.props.command})), 
+            React.createElement("td", null, React.createElement("input", {type: "text", value: this.props.command.join("")})), 
             React.createElement("td", {rowSpan: "2"}, 
               React.createElement("form", {action: "/post", method: "POST"}, 
-                React.createElement("input", {type: "hidden", name: "command", value: this.props.commandRaw}), 
+                React.createElement("input", {type: "hidden", name: "command", value: this.props.commandRaw.join("")}), 
                 React.createElement("input", {type: "submit", value: "ENTER", className: "enter-button"})
               )
             )
           ), 
           React.createElement("tr", null, 
             React.createElement("td", null, "Raw"), 
-            React.createElement("td", null, React.createElement("input", {type: "text", value: this.props.commandRaw}))
+            React.createElement("td", null, React.createElement("input", {type: "text", value: this.props.commandRaw.join("")}))
           )
         )
       )
@@ -120,16 +120,23 @@ class CommandLine extends React.Component {
 
 class Controls extends React.Component {
   appendCommand(repr, raw) {
-    this.setState({
-      command: this.state.command + repr,
-      commandRaw: this.state.commandRaw + raw
-    })
+    if (raw == "**") {
+      this.setState({
+        command: this.state.command.slice(0, -1),
+        commandRaw: this.state.commandRaw.slice(0, -1)
+      })
+    } else {
+      this.setState({
+        command: this.state.command.concat(repr),
+        commandRaw: this.state.commandRaw.concat(raw)
+      })
+    }
   }
   constructor() {
     super();
     this.state = {
-      command: "",
-      commandRaw: ""
+      command: [],
+      commandRaw: []
     };
   }
   render() {
