@@ -49,17 +49,17 @@ class Numpad extends React.Component {
 
 function CommandButton(props) {
   return (
-    React.createElement("button", {className: "command-button", onClick: () => props.onClick()}, 
+    React.createElement("button", {className: props.small?"command-button-small":"command-button", onClick: () => props.onClick()}, 
       props.text
     )
   );
 }
 
 class CommandPalette extends React.Component {
-  renderButton(repr, i) {
+  renderButton(repr, i, small) {
     return (
       React.createElement("td", null, 
-        React.createElement(CommandButton, {text: repr, onClick: () => this.props.appendCommand(repr, "*" + i)})
+        React.createElement(CommandButton, {small: small, text: repr, onClick: () => this.props.appendCommand(repr, "*" + i)})
       )
     );
   }
@@ -79,12 +79,12 @@ class CommandPalette extends React.Component {
           ), 
           React.createElement("tr", null, 
             this.renderButton("Next", 7), 
-            this.renderButton("Address", 8), 
+            this.renderButton("Address", 8, true), 
             this.renderButton("Full", 9)
           ), 
           React.createElement("tr", null, 
             this.renderButton("Clear", "*"), 
-            this.renderButton("Chan Check", 0), 
+            this.renderButton("Chan Check", 0, true), 
             this.renderButton("Sneak", "#")
           )
         )
