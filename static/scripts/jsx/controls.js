@@ -48,7 +48,7 @@ class Numpad extends React.Component {
 
 function CommandButton(props) {
   return (
-    <button className={".command-button" + props.small?" command-button-small":""} onClick={() => props.onClick()}>
+    <button className={".command-button" + (props.small?" command-button-small":"")} onClick={() => props.onClick()}>
       {props.text}
     </button>
   );
