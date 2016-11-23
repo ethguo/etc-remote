@@ -95,24 +95,25 @@ class CommandPalette extends React.Component {
 class CommandLine extends React.Component {
   render() {
     return (
-      <table id="commandline-table">
-        <tbody>
-          <tr>
-            <td>Command</td>
-            <td><input type="text" value={this.props.command.join("")} /></td>
-            <td rowSpan="2">
-              <form action="/post" method="POST">
-                <input type="hidden" name="command" value={this.props.commandRaw.join("")} />
-                <input type="submit" value="ENTER" className="enter-button" />
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td>Raw</td>
-            <td><input type="text" value={this.props.commandRaw.join("")} /></td>
-          </tr>
-        </tbody>
-      </table>
+      <div>
+        <table id="commandline-table">
+          <tbody>
+            <tr>
+              <td>Command</td>
+              <td><input type="text" value={this.props.command.join("")} /></td>
+            </tr>
+            <tr>
+              <td>Raw</td>
+              <td><input type="text" value={this.props.commandRaw.join("")} /></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <form action="/post" method="POST">
+          <input type="hidden" name="command" value={this.props.commandRaw.join("")} />
+          <input type="submit" value="ENTER" className="enter-button" />
+        </form>
+      </div>
     )
   }
 }

@@ -13,7 +13,11 @@ body {
   padding-bottom: 3em;
 }
 
-.numpad-button, .command-button {
+#commandline-table {
+  padding-bottom: 1em;
+}
+
+.numpad-button, .command-button, input[type=submit] {
   font-size: inherit;
   padding: 0.5em;
 }
@@ -28,9 +32,13 @@ body {
    height: 3em;
  }
 
-input {
-  font-size: 120%;
-  padding: 0.5em;
+ .command-button-small {
+   font-size: 75%;
+ }
+
+input[type=text] {
+  font-size: 125%;
+  padding: 0.25em;
 }
 
 /*.numpad-button {

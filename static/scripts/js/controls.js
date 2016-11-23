@@ -96,22 +96,23 @@ class CommandPalette extends React.Component {
 class CommandLine extends React.Component {
   render() {
     return (
-      React.createElement("table", {id: "commandline-table"}, 
-        React.createElement("tbody", null, 
-          React.createElement("tr", null, 
-            React.createElement("td", null, "Command"), 
-            React.createElement("td", null, React.createElement("input", {type: "text", value: this.props.command.join("")})), 
-            React.createElement("td", {rowSpan: "2"}, 
-              React.createElement("form", {action: "/post", method: "POST"}, 
-                React.createElement("input", {type: "hidden", name: "command", value: this.props.commandRaw.join("")}), 
-                React.createElement("input", {type: "submit", value: "ENTER", className: "enter-button"})
-              )
+      React.createElement("div", null, 
+        React.createElement("table", {id: "commandline-table"}, 
+          React.createElement("tbody", null, 
+            React.createElement("tr", null, 
+              React.createElement("td", null, "Command"), 
+              React.createElement("td", null, React.createElement("input", {type: "text", value: this.props.command.join("")}))
+            ), 
+            React.createElement("tr", null, 
+              React.createElement("td", null, "Raw"), 
+              React.createElement("td", null, React.createElement("input", {type: "text", value: this.props.commandRaw.join("")}))
             )
-          ), 
-          React.createElement("tr", null, 
-            React.createElement("td", null, "Raw"), 
-            React.createElement("td", null, React.createElement("input", {type: "text", value: this.props.commandRaw.join("")}))
           )
+        ), 
+
+        React.createElement("form", {action: "/post", method: "POST"}, 
+          React.createElement("input", {type: "hidden", name: "command", value: this.props.commandRaw.join("")}), 
+          React.createElement("input", {type: "submit", value: "ENTER", className: "enter-button"})
         )
       )
     )
