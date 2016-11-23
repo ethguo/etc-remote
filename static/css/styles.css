@@ -5,12 +5,12 @@ body {
 
 #numpad-table {
   float:left;
-  padding-right: 4em;
-  padding-bottom: 4em;
+  padding-right: 2em;
+  padding-bottom: 3em;
 }
 
 #command-table {
-  padding-bottom: 4em;
+  padding-bottom: 3em;
 }
 
 .numpad-button, .command-button {
@@ -19,13 +19,13 @@ body {
 }
 
 .numpad-button {
-  width: 4em;
-  height: 4em;
+  width: 3em;
+  height: 3em;
 }
 
  .command-button {
-   width: 6em;
-   height: 4em;
+   width: 3em;
+   height: 3em;
  }
 
 input {
