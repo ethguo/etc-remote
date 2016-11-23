@@ -15,7 +15,7 @@ body {
 
 .numpad-button, .command-button {
   font-size: inherit;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .numpad-button {
@@ -24,7 +24,7 @@ body {
 }
 
  .command-button {
-   width: 4.5em;
+   width: 4em;
    height: 3em;
  }
 
